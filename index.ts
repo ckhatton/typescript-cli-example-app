@@ -15,6 +15,17 @@ console.log(
 );
 log('--server, -s to run a Bun server.\n\n');
 
+// Environment Variables
+log('___ 🌱 Environment Variables ___\n', colours.cyan);
+
+const port: string = Bun.env.PORT || '3000';
+const greeting: string =
+  Bun.env.GREETING || `Hello world! 👋 You are running on Bun! 🍞`;
+
+log(`PORT: ${port}`);
+log(`GREETING: ${greeting}`);
+log('');
+
 // Bun.argv Data
 log('___ 🛂 Bun.argv Data ___\n', colours.cyan);
 
@@ -43,9 +54,9 @@ if (parsedArgs.server || parsedArgs.s) {
   log('___ 📦 Bun Server ___\n', colours.cyan);
 
   const server = Bun.serve({
-    port: 3000,
+    port: port,
     fetch(_req) {
-      return new Response('Hello world! 👋 You are running on Bun! 🍞');
+      return new Response(greeting);
     },
   });
 
