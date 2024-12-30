@@ -45,7 +45,7 @@ const parsedArgs: { server?: boolean; s?: boolean } =
     allowPositionals: true,
   }).values || {};
 
-log(`The raw arguments: ${rawArgs}`);
+log(`The raw arguments: ${rawArgs.length ? rawArgs : 'None'}`);
 log(`The parsed arguments: ${JSON.stringify(parsedArgs)}`);
 log('');
 
