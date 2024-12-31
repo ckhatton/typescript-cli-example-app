@@ -1,0 +1,39 @@
+{
+  "name": "typescript-cli-example-app",
+  "version": "1.0.0",
+  "author": {
+    "name": "Christopher Hatton (ckhatton)",
+    "email": "mail@ckhatton.com",
+    "url": "https://ckhatton.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckhatton/typescript-cli-example-app"
+  },
+  "bin": {
+    "clie": "./index.ts"
+  },
+  "module": "index.ts",
+  "dependencies": {
+    "@octokit/core": "^6.1.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "description": "This is an app primarily to showcase my skills with using TypeScript and creating a CLI (Command Line Interface) app.",
+  "keywords": [
+    "typescript",
+    "cli",
+    "bun",
+    "demo",
+    "example"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "clie": "bun run index.ts"
+  },
+  "type": "module"
+}
