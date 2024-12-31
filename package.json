@@ -23,7 +23,7 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "description": "This is an app primarily to showcase my skills with TypeScript and creating a CLI (Command Line Interface) app.",
+  "description": "This is an app primarily to showcase my skills with using TypeScript and creating a CLI (Command Line Interface) app.",
   "keywords": [
     "typescript",
     "cli",
@@ -33,7 +33,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "cli": "bun run index.ts"
+    "clie": "bun run index.ts"
   },
   "type": "module"
 }
