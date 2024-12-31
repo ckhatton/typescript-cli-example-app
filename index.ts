@@ -1,3 +1,4 @@
+#!/usr/bin/env bun
 import loadArgv from './tasks/loadAgrv';
 import loadBunServer from './tasks/loadBunServer.ts';
 import loadEnvFile from './tasks/loadEnvFile';
