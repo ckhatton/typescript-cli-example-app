@@ -11,6 +11,9 @@
     "url": "https://github.com/ckhatton/typescript-cli-example-app"
   },
   "module": "index.ts",
+  "dependencies": {
+    "@octokit/core": "^6.1.2"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
