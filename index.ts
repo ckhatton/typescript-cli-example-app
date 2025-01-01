@@ -4,9 +4,13 @@ import loadBunServer from './tasks/loadBunServer.ts';
 import loadEnvFile from './tasks/loadEnvFile';
 import loadGitHub from './tasks/loadGitHub';
 import loadHeader from './tasks/loadHeader';
+import loadMessage from './tasks/loadMessage';
 
 // Header
 loadHeader();
+
+// Misc. Message
+loadMessage();
 
 // Environment Variables
 const { githubToken, greeting, port } = loadEnvFile();
