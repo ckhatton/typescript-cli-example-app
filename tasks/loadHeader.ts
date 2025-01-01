@@ -1,7 +1,7 @@
 import colours from '../utilities/colours';
 import log from '../utilities/log';
 
-function loadHeader(): void {
+export default (): void => {
   console.log(
     colours.cyan,
     '\n\n' +
@@ -14,6 +14,4 @@ function loadHeader(): void {
       ' ===============================================================\n'
   );
   log('--server, -s to run a Bun server.\n\n');
-}
-
-export default loadHeader;
+};

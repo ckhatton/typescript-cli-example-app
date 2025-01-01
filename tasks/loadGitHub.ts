@@ -2,10 +2,10 @@ import { Octokit } from '@octokit/core';
 import colours from '../utilities/colours';
 import log from '../utilities/log';
 
-async function loadGitHub(githubToken: string): Promise<void> {
+export default async (githubToken: string): Promise<void> => {
   log('___ 🐙 GitHub ___\n', colours.cyan);
 
-  if (githubToken.length === 0) {
+  if (!githubToken || githubToken === '-') {
     log(
       'Please set "GITHUB_PERSONAL_ACCESS_TOKEN" in the `.env` file.\n',
       colours.red
@@ -46,6 +46,4 @@ async function loadGitHub(githubToken: string): Promise<void> {
   });
 
   log('');
-}
-
-export default loadGitHub;
+};
