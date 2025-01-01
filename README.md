@@ -75,5 +75,6 @@ bun run clie <optional arguments>
 ### Optional Arguments
 
 ```text
---server, -s to run a Bun server
+--server, -s to run a Bun server.
+--zip '<zip file>', -z '<zip file>' to list the entries of a zip file.
 ```

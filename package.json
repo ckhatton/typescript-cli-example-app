@@ -15,9 +15,11 @@
   },
   "module": "index.ts",
   "dependencies": {
-    "@octokit/core": "^6.1.2"
+    "@octokit/core": "^6.1.2",
+    "adm-zip": "^0.5.16"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.7",
     "@types/bun": "latest"
   },
   "peerDependencies": {

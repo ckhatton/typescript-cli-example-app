@@ -5,6 +5,7 @@ import loadEnvFile from './tasks/loadEnvFile';
 import loadGitHub from './tasks/loadGitHub';
 import loadHeader from './tasks/loadHeader';
 import loadMessage from './tasks/loadMessage';
+import loadZipFile from './tasks/loadZipFile.ts';
 
 // Header
 loadHeader();
@@ -17,6 +18,11 @@ const { githubToken, greeting, port } = loadEnvFile();
 
 // Bun.argv Data
 const parsedArgs = loadArgv();
+
+// Zip File Entries
+if (parsedArgs.zip || parsedArgs.z) {
+  loadZipFile(parsedArgs.zip || parsedArgs.z);
+}
 
 // GitHub
 await loadGitHub(githubToken);

@@ -14,4 +14,5 @@ export default (): void => {
       ' ===============================================================\n'
   );
   log('--server, -s to run a Bun server.\n\n');
+  log(`--zip '<zip file>', -z '<zip file>' to list the entries of a zip file.`);
 };

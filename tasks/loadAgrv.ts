@@ -3,8 +3,10 @@ import colours from '../utilities/colours';
 import log from '../utilities/log';
 
 export default (): {
-  server?: boolean;
   s?: boolean;
+  server?: boolean;
+  z?: string;
+  zip?: string;
 } => {
   log('___ 🛂 Bun.argv Data ___\n', colours.cyan);
 
@@ -13,11 +15,17 @@ export default (): {
     parseArgs({
       args: Bun.argv,
       options: {
+        s: {
+          type: 'boolean',
+        },
         server: {
           type: 'boolean',
         },
-        s: {
-          type: 'boolean',
+        z: {
+          type: 'string',
+        },
+        zip: {
+          type: 'string',
         },
       },
       strict: true,
