@@ -1,7 +1,7 @@
 import colours from '../utilities/colours';
 import log from '../utilities/log';
 
-function loadBunServer(greeting: string, port: number): void {
+export default (greeting: string, port: number): void => {
   log('___ 📦 Bun Server ___\n', colours.cyan);
 
   const server = Bun.serve({
@@ -18,6 +18,4 @@ function loadBunServer(greeting: string, port: number): void {
     log('');
     process.exit(0);
   }, 60000);
-}
-
-export default loadBunServer;
+};

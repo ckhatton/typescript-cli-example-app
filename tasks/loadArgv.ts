@@ -2,10 +2,14 @@ import { parseArgs } from 'util';
 import colours from '../utilities/colours';
 import log from '../utilities/log';
 
-function loadArgv(): {
-  server?: boolean;
+export default (): {
+  c?: boolean;
+  calc?: boolean;
   s?: boolean;
-} {
+  server?: boolean;
+  z?: string;
+  zip?: string;
+} => {
   log('___ 🛂 Bun.argv Data ___\n', colours.cyan);
 
   const rawArgs: string[] = Bun.argv.slice(2);
@@ -13,11 +17,23 @@ function loadArgv(): {
     parseArgs({
       args: Bun.argv,
       options: {
-        server: {
+        c: {
+          type: 'boolean',
+        },
+        calc: {
           type: 'boolean',
         },
         s: {
           type: 'boolean',
+        },
+        server: {
+          type: 'boolean',
+        },
+        z: {
+          type: 'string',
+        },
+        zip: {
+          type: 'string',
         },
       },
       strict: true,
@@ -29,6 +45,4 @@ function loadArgv(): {
   log('');
 
   return parsedArgs;
-}
-
-export default loadArgv;
+};

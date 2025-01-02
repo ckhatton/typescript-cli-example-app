@@ -1,6 +1,6 @@
 {
   "name": "typescript-cli-example-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Christopher Hatton (ckhatton)",
     "email": "mail@ckhatton.com",
@@ -15,9 +15,11 @@
   },
   "module": "index.ts",
   "dependencies": {
-    "@octokit/core": "^6.1.2"
+    "@octokit/core": "^6.1.2",
+    "adm-zip": "^0.5.16"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.7",
     "@types/bun": "latest"
   },
   "peerDependencies": {
