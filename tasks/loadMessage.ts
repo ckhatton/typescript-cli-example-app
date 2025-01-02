@@ -15,7 +15,7 @@ export default (): void => {
       8: '⬜️ Whiteboards are remarkable.',
       9: '⚛️ Never trust atoms; they make up everything.',
       10: '⏎ I was addicted to the hokey pokey, but then I turned myself around.',
-    }[Math.floor(Math.random() * 11) + 1] ?? '👋 Hello world!',
+    }[Math.floor(Math.random() * 10) + 1] ?? '👋 Hello world!',
     colours.yellow
   );
   log('');
