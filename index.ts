@@ -1,7 +1,6 @@
 #!/usr/bin/env bun
 import loadArgv from './tasks/loadArgv.ts';
 import loadBunServer from './tasks/loadBunServer.ts';
-import loadCalculation from './tasks/loadCalculation.ts';
 import loadEnvFile from './tasks/loadEnvFile';
 import loadGitHub from './tasks/loadGitHub';
 import loadHeader from './tasks/loadHeader';
@@ -35,5 +34,8 @@ if (parsedArgs.server || parsedArgs.s) {
 
 // Calculator
 if (parsedArgs.calc || parsedArgs.c) {
+  const { default: loadCalculation } = await import(
+    './tasks/loadCalculation.ts'
+  );
   loadCalculation(parsedArgs.server || parsedArgs.s);
 }
