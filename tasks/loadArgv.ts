@@ -3,6 +3,8 @@ import colours from '../utilities/colours';
 import log from '../utilities/log';
 
 export default (): {
+  c?: boolean;
+  calc?: boolean;
   s?: boolean;
   server?: boolean;
   z?: string;
@@ -15,6 +17,12 @@ export default (): {
     parseArgs({
       args: Bun.argv,
       options: {
+        c: {
+          type: 'boolean',
+        },
+        calc: {
+          type: 'boolean',
+        },
         s: {
           type: 'boolean',
         },

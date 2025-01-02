@@ -75,6 +75,7 @@ bun run clie <optional arguments>
 ### Optional Arguments
 
 ```text
+--calc, -c to run a random calculation.
 --server, -s to run a Bun server.
 --zip '<zip file>', -z '<zip file>' to list the entries of a zip file.
 ```

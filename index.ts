@@ -1,6 +1,7 @@
 #!/usr/bin/env bun
-import loadArgv from './tasks/loadAgrv';
+import loadArgv from './tasks/loadArgv.ts';
 import loadBunServer from './tasks/loadBunServer.ts';
+import loadCalculation from './tasks/loadCalculation.ts';
 import loadEnvFile from './tasks/loadEnvFile';
 import loadGitHub from './tasks/loadGitHub';
 import loadHeader from './tasks/loadHeader';
@@ -30,4 +31,9 @@ await loadGitHub(githubToken);
 // Bun Server
 if (parsedArgs.server || parsedArgs.s) {
   loadBunServer(greeting, port);
+}
+
+// Calculator
+if (parsedArgs.calc || parsedArgs.c) {
+  loadCalculation(parsedArgs.server || parsedArgs.s);
 }
