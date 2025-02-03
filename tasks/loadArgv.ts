@@ -2,18 +2,20 @@ import { parseArgs } from 'util';
 import colours from '../utilities/colours';
 import log from '../utilities/log';
 
-export default (): {
+type Args = {
   c?: boolean;
   calc?: boolean;
   s?: boolean;
   server?: boolean;
   z?: string;
   zip?: string;
-} => {
+};
+
+export default (): Args => {
   log('___ 🛂 Bun.argv Data ___\n', colours.cyan);
 
   const rawArgs: string[] = Bun.argv.slice(2);
-  const parsedArgs: { server?: boolean; s?: boolean } =
+  const parsedArgs: Args =
     parseArgs({
       args: Bun.argv,
       options: {
